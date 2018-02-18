@@ -1,0 +1,4 @@
+author = Purplefin Neptuna
+version = 0.1
+displayName = HI Weapons
+includePDB = false
