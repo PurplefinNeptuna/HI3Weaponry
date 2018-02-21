@@ -1,5 +1,6 @@
 # HI3Weaponry
 HI3 Weaponry mod, for Terraria tModLoader
+
 [Forum Link](https://forums.terraria.org/index.php?threads/honkai-impact-3-weaponry.66908/)
 
 # Credits
