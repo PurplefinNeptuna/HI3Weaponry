@@ -14,8 +14,9 @@ namespace hiweapons.Items
         }
         public override void SetDefaults()
         {
-            item.damage = 50;
+            item.damage = 76;
             item.melee = true;
+			item.crit = -4;
             item.width = 64;
             item.height = 64;
             item.useTime = 14;
@@ -31,7 +32,7 @@ namespace hiweapons.Items
 
         public override void UseItemHitbox(Player player, ref Rectangle hitbox, ref bool noHitbox)
         {
-			Hiweapons.CustSwingHitbox(player, item, ref hitbox, 32, 40);
+			Hiweapons.CustSwingHitbox(player, ref hitbox, 32, 40);
         }
     }
 }

@@ -13,8 +13,8 @@ namespace hiweapons.Buff
 	{
 		public override void SetDefaults()
 		{
-			DisplayName.SetDefault("Ultra Slash Cooldown");
-			Description.SetDefault("Can't use Ultra Slash skill");
+			DisplayName.SetDefault("Skill Cooldown");
+			Description.SetDefault("Can't use weapon skill");
 			Main.debuff[Type] = true;
 			Main.buffNoSave[Type] = true;
 			canBeCleared = false;

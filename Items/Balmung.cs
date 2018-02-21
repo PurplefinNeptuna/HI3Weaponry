@@ -14,7 +14,7 @@ namespace hiweapons.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Balmung");
-			Tooltip.SetDefault("This is a modded sword.");
+			Tooltip.SetDefault("Himeko's Greatsword");
 			glowSkillOff = Hiweapons.AddGlow("Balmung_off");
 			glowSkillOn = Hiweapons.AddGlow("Balmung_on");
 		}
@@ -22,8 +22,8 @@ namespace hiweapons.Items
 		{
             //40% of 4* balmung stats
 			item.damage = 90;
-            //5% crit chance (basic 4* balmung crit chance at lv50)
-            item.crit = 1;
+            //10% crit chance
+            item.crit = 6;
 			item.melee = true;
 			item.width = 62;
 			item.height = 62;
@@ -31,7 +31,7 @@ namespace hiweapons.Items
 			item.useAnimation = 40;
 			item.useStyle = 1;
 			item.knockBack = 6;
-			item.value = 1000000;
+			item.value = 10000;
 			item.rare = 8;
             item.scale = 1.4f;
 			item.UseSound = SoundID.Item1;
@@ -81,7 +81,7 @@ namespace hiweapons.Items
 			}
 			else
 			{
-				Hiweapons.CustRot(ref player, item, new Vector2(13,49));
+				Hiweapons.CustRot(player, new Vector2(13,49));
 
 				//can change when not slashing
 				if (player.itemAnimation < 2 || player.itemAnimation > player.itemAnimationMax - 2)
@@ -141,7 +141,7 @@ namespace hiweapons.Items
 			}
 			else
 			{
-				Hiweapons.CustSwingHitbox(player, item, ref hitbox, 62, 77);
+				Hiweapons.CustSwingHitbox(player, ref hitbox, 62, 77);
 			}
         }
 
