@@ -26,7 +26,7 @@ namespace hiweapons.Projectiles
 			projectile.Name = "Balmung Projectile";
 			projectile.height = 32;
 			projectile.width = 60;
-			projectile.scale = 1.44f;
+			projectile.scale = 1.5f;
 			projectile.timeLeft = 48;
 			projectile.penetrate = -1;
 			projectile.friendly = true;

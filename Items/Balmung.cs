@@ -21,7 +21,7 @@ namespace hiweapons.Items
 		public override void SetDefaults()
 		{
             //40% of 4* balmung stats
-			item.damage = 90;
+			item.damage = 72;
             //10% crit chance
             item.crit = 6;
 			item.melee = true;
@@ -33,7 +33,7 @@ namespace hiweapons.Items
 			item.knockBack = 6;
 			item.value = 10000;
 			item.rare = 8;
-            item.scale = 1.4f;
+            item.scale = 1.45f;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.glowMask = glowSkillOff;
@@ -81,7 +81,7 @@ namespace hiweapons.Items
 			}
 			else
 			{
-				Hiweapons.CustRot(player, new Vector2(13,49));
+				Hiweapons.CustRot(player, new Vector2(15,47));
 
 				//can change when not slashing
 				if (player.itemAnimation < 2 || player.itemAnimation > player.itemAnimationMax - 2)
@@ -114,7 +114,7 @@ namespace hiweapons.Items
 				if (player.ownedProjectileCounts[mod.ProjectileType<Projectiles.Balmungp>()] < 1)
 				{
 					bool pCrit = Main.rand.NextFloat() < 0.15f || buffed;
-					Projectile.NewProjectile(player.position.X + player.direction * 24 + 24, player.position.Y, (pCrit?12.5f:10) * player.direction, 0, mod.ProjectileType<Projectiles.Balmungp>(), (item.damage * (pCrit?8:4)) / 9, 0f, player.whoAmI, player.direction, pCrit?1f:0f);
+					Projectile.NewProjectile(player.position.X + player.direction * 24 + 24, player.position.Y + 19 - 19 * player.gravDir, (pCrit ? 12.5f : 10) * player.direction, 0, mod.ProjectileType<Projectiles.Balmungp>(), (item.damage * (pCrit ? 8 : 4)) / 9, 0f, player.whoAmI, player.direction, pCrit ? 1f : 0f);
 				}
 			}
 		}
@@ -130,7 +130,7 @@ namespace hiweapons.Items
 
 		public override Vector2? HoldoutOffset()
 		{
-			return new Vector2(0, -24);
+			return new Vector2(-2, -25);
 		}
 
 		public override void UseItemHitbox(Player player, ref Rectangle hitbox, ref bool noHitbox)

@@ -25,7 +25,7 @@ namespace hiweapons.Items
             item.knockBack = 6;
             item.value = 10000;
             item.rare = 2;
-            item.scale = 0.9f;
+            item.scale = 0.94f;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
         }

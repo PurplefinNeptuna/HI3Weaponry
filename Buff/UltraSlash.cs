@@ -29,5 +29,6 @@ namespace hiweapons.Buff
 				player.meleeDamage += 0.13f;
 			}
 		}
+
 	}
 }

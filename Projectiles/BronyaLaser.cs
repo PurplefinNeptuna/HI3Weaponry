@@ -22,9 +22,12 @@ namespace hiweapons.Projectiles
 		private float MaxDistance = 720f;
 
 		// Weapon type are saved in ai0
-		// This can be used for special skills later
+		// This can be used for special skills for many beam cannon later
 		// List:
 		// 1f = Project Bunny 19C
+		// 2f = Cathode Type-09
+		// 3f = MiG-7
+		// 4f = Devourer's Laser
 
 		// The actual distance is stored in the ai1 field
 		// By making a property to handle this it makes our life easier, and the accessibility more readable
@@ -149,7 +152,13 @@ namespace hiweapons.Projectiles
 		// Set custom immunity time on hitting an NPC
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
 		{
-			target.immune[projectile.owner] = 2 + (3 * (damage / (crit ? 2 : 1))) / projectile.damage;
+			HiNPC tmod = target.GetGlobalNPC<HiNPC>();
+			float fdamage = damage;
+			fdamage /= tmod.raged ? 1.36f : 1f;
+			fdamage /= crit ? 2f : 1f;
+			fdamage /= (float)projectile.damage;
+			fdamage *= 3;
+			target.immune[projectile.owner] = 2 + (int)fdamage;
 			Dust dust;
 			dust = Dust.NewDustDirect(target.position, target.width, target.height, 133, 0f, 0f, 0, Color.White, 1.44f);
 			dust.noGravity = true;
