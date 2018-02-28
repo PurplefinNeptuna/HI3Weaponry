@@ -157,8 +157,8 @@ namespace hiweapons.Projectiles
 			fdamage /= tmod.raged ? 1.36f : 1f;
 			fdamage /= crit ? 2f : 1f;
 			fdamage /= (float)projectile.damage;
-			fdamage *= 3;
-			target.immune[projectile.owner] = 2 + (int)fdamage;
+			fdamage *= 5;
+			target.immune[projectile.owner] = 5 + (int)fdamage;
 			Dust dust;
 			dust = Dust.NewDustDirect(target.position, target.width, target.height, 133, 0f, 0f, 0, Color.White, 1.44f);
 			dust.noGravity = true;

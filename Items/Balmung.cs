@@ -21,7 +21,7 @@ namespace hiweapons.Items
 		public override void SetDefaults()
 		{
             //40% of 4* balmung stats
-			item.damage = 72;
+			item.damage = 90;
             //10% crit chance
             item.crit = 6;
 			item.melee = true;

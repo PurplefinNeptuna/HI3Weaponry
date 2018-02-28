@@ -23,7 +23,7 @@ namespace hiweapons.Items
 
 		public override void SetDefaults()
 		{
-			item.damage = 73;
+			item.damage = 92;
 			item.ranged = true;
 			item.channel = true;
 			item.width = 51;

@@ -22,7 +22,7 @@ namespace hiweapons.Items
 		}
 		public override void SetDefaults()
 		{
-			item.damage = 74;
+			item.damage = 92;
 			item.melee = true;
 			item.crit = 0;
 			item.width = 62;
