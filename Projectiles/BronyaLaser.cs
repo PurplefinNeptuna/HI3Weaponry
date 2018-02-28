@@ -210,11 +210,6 @@ namespace hiweapons.Projectiles
 
 			else
 			{
-				/* Do we still have enough mana? If not, we kill the projectile because we cannot use it anymore
-				if (Main.time % 10 < 1 && !player.CheckMana(player.inventory[player.selectedItem].mana, true))
-				{
-					projectile.Kill();
-				}*/
 				if (!OverCharge)
 				{
 					Charge += 10;

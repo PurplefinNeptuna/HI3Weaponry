@@ -51,11 +51,11 @@ namespace hiweapons.UI
 			int charge = hiplayer.laserCharge;
 			int maxCharge = hiplayer.laserMaxCharge;
 			bool overCharge = hiplayer.laserOvercharge;
-			float urgent = (float)hiplayer.laserCharge / (float)hiplayer.laserMaxCharge;
+			float progress = (float)hiplayer.laserCharge / (float)hiplayer.laserMaxCharge;
 
-			fill.SetProgress(urgent);
+			fill.SetProgress(progress);
 
-			urgent = overCharge ? 1f : Math.Min(urgent * 1.5f, 1f);
+			float urgent = overCharge ? 1f : Math.Min(progress * 1.5f, 1f);
 			bgColor = Color.White * urgent;
 
 			back.SetAlter(overCharge);

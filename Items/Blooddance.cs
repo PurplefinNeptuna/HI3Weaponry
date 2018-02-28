@@ -38,6 +38,18 @@ namespace hiweapons.Items
 			item.autoReuse = true;
 			item.glowMask = glowID;
 		}
+		public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.HallowedBar, 10);
+			recipe.AddIngredient(ItemID.SoulofFright, 1);
+			recipe.AddIngredient(ItemID.SoulofMight, 1);
+			recipe.AddIngredient(ItemID.SoulofSight, 1);
+			recipe.AddIngredient(ItemID.BrokenHeroSword, 1);
+			recipe.AddTile(TileID.AdamantiteForge);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
 
 		public override bool AltFunctionUse(Player player)
 		{

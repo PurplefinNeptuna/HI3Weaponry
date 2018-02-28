@@ -41,17 +41,23 @@ namespace hiweapons
 				float def = target.statDefense;
 				float endurance = target.endurance;
 				/*
-					A = (B-D*d)*(1-E)
-					2A = ((B+X)-D*d)*(1-E)
-					2 = (B+X) - D*d
-						/B-D*d
-					2B-2D*d = (B+X) - D*d
-					2B-D*d = B+X
-					B-D*d = X
-
-					1 = (B-D*d) * (1-E)
-					1/(1-E) = B-D*d
-					1/(1-E) + D*d = B
+					A = applied damage
+					B = damage
+					D = defense
+					d = defense multiplier
+					E = endurance
+					X = additional damage
+					Cari tambahan damage (X) biar applied damage 2x (2A)
+					A			= (B - D * d) * (1 - E)
+					2A			= (B + X - D * d) * (1 - E)
+					2			= (B + X - D * d) / (B - D * d)
+					2B - 2D * d = B + X - D * d
+					B - D * d	= X
+					
+					Cari minimal damage (B) biar applied damage = 1 (A = 1)
+					1					= (B - D * d) * (1 - E)
+					1 / (1 - E)			= B - D * d
+					1 / (1 - E) + D * d = B
 				*/
 				float A = 1f / (1f - endurance) + def * defMult;
 				if (newDamage - A < 0.000001f)
