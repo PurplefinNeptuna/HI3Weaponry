@@ -29,7 +29,7 @@ namespace hiweapons.Items
 			item.width = 51;
 			item.height = 21;
 			item.useTime = 4;
-			// 10% critical chance
+			// 5% critical chance
 			item.crit = 1;
 			item.useAnimation = 4;
 			item.useStyle = 5;

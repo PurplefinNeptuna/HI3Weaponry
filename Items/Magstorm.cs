@@ -22,17 +22,17 @@ namespace hiweapons.Items
             item.useTime = 14;
             item.useAnimation = 14;
             item.useStyle = 1;
-            item.knockBack = 6;
+            item.knockBack = 2;
             item.value = 10000;
             item.rare = 2;
             item.scale = 0.94f;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
+			item.useTurn = true;
         }
-
-        public override void UseItemHitbox(Player player, ref Rectangle hitbox, ref bool noHitbox)
-        {
-			Hiweapons.CustSwingHitbox(player, ref hitbox, 32, 40);
-        }
-    }
+		public override void UseStyle(Player player)
+		{
+			Hiweapons.CustRot(player, new Vector2(8, 58));
+		}
+	}
 }

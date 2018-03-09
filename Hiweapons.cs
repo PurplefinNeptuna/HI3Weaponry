@@ -50,7 +50,13 @@ namespace hiweapons
 				ItemID.AdamantiteBar,
 				ItemID.TitaniumBar
 			});
+			RecipeGroup anyMechSoul = new RecipeGroup(() => "Any Mech Soul", new int[]{
+				ItemID.SoulofFright,
+				ItemID.SoulofMight,
+				ItemID.SoulofSight,
+			});
 			RecipeGroup.RegisterGroup("Hiweapon:AnyTitanium", anyTitanium);
+			RecipeGroup.RegisterGroup("Hiweapon:AnyMechSoul", anyMechSoul);
 		}
 
 		public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
